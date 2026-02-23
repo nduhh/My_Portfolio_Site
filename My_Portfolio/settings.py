@@ -108,9 +108,9 @@ USE_I18N = True
 USE_TZ = True
 
 # Security settings for CSRF
-CSRF_COOKIE_SECURE = False  # Set to True in production with HTTPS
-CSRF_COOKIE_HTTPONLY = False  # Allow JavaScript to access the cookie
-CSRF_USE_SESSIONS = False  # Use cookie-based CSRF
+SECURE_SSL_REDIRECT = False
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/

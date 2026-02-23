@@ -70,7 +70,7 @@ def get_rule_based_response(message):
     # Skills related queries
     if any(word in message for word in ['skill', 'technologies', 'tech stack', 'know']):
             return (
-            f"You typed: {message}\n"
+            f"You typed or said: {message}\n"
             "Respond: Nduduzo specializes in Full Stack Development using Python (Django) for backend "
             "and JavaScript (HTML, CSS, JavaScript) for frontend development. "
             "He also develops mobile applications using React Native and Python (Django). "
@@ -81,7 +81,7 @@ def get_rule_based_response(message):
     # Education related
     elif any(word in message for word in ['education', 'study', 'studied', 'university', 'tut', 'school', 'qualification']):
         return (
-            f"You typed: {message}\n"
+            f"You typed or said: {message}\n"
             "Respond: Nduduzo studied Computer Science at Tshwane University of Technology (TUT), "
             "where he completed his Diploma in Computer Science in January 2026 and is graduated that year. "
             "He completed his matric in 2020 at Amandla High School. "
@@ -91,7 +91,7 @@ def get_rule_based_response(message):
     # Experience related
     elif any(word in message for word in ['experience', 'background', 'work', 'career']):
         return (
-    f"You typed: {message}\n"
+    f"You typed or said: {message}\n"
     "Response: Nduduzo completed his Work Integrated Learning (WIL) as a Software Developer "
     "at NSK IT Solutions. During this period, he independently developed a full internal "
     "intranet web application with role-based access control. He was responsible for "
@@ -103,7 +103,7 @@ def get_rule_based_response(message):
     # Projects related
     elif any(word in message for word in ['project', 'portfolio', 'build', 'developed']):
         return (
-            f"You typed: {message}\n"
+            f"You typed or said: {message}\n"
             "Respond: Nduduzo has built multiple real-world projects including:"
             "• An AI-powered portfolio chatbot using Django, HTML, CSS, and JavaScript\n"
             "• A React Native OCR scanner with live text recognition\n"
@@ -115,14 +115,14 @@ def get_rule_based_response(message):
     # Contact related
     elif any(word in message for word in ['contact', 'reach', 'email']):
         return (
-            f"You typed: {message}\n"
+            f"You typed or said: {message}\n"
             "Respond: You can contact Nduduzo through the contact form on this website or connect with him on LinkedIn."
         )    
 
     # AI related
     elif any(word in message for word in ['ai', 'machine learning', 'ocr', 'artificial intelligence']):
         return (
-            f"You typed: {message}\n"
+            f"You typed or said: {message}\n"
             "Respond: Nduduzo actively works with Artificial Intelligence technologies including "
             "Optical Character Recognition (OCR) using Google ML Kit, GPT integrations, "
             "and intelligent chatbot systems. He focuses on building practical AI-powered "
@@ -132,7 +132,7 @@ def get_rule_based_response(message):
     # Hiring / Why hire
     elif any(word in message for word in ['hire', 'why', 'employ', 'recruit']):
         return (
-            f"You typed: {message}\n"
+            f"You typed or said: {message}\n"
             "Respond: Nduduzo combines strong backend architecture skills with modern frontend and AI integration. "
             "He has real-world experience delivering complete systems independently — from analysis "
             "and design to deployment. He is analytical, adaptable, and passionate about building "
@@ -142,28 +142,78 @@ def get_rule_based_response(message):
     # Mobile development
     elif any(word in message for word in ['mobile', 'android', 'react native']):
         return (
-            f"You typed: {message}\n"
+            f"You typed or said: {message}\n"
             "Respond: Nduduzo develops cross-platform mobile applications using React Native and Django. "
             "He has experience integrating native Android modules, implementing camera-based OCR scanning, "
             "and building performance-optimized mobile solutions."
         )
 
+    # Strengths related
+    elif any(word in message for word in ['strength', 'strong', 'best at']):
+        return (
+            f"You typed or said: {message}\n"
+            "Respond: Nduduzo's key strengths include strong backend architecture design, "
+            "problem-solving, and the ability to build complete systems independently. "
+            "He is comfortable working across the full stack — from database design "
+            "to frontend interfaces — and integrating AI features into real-world applications."
+    )
+
+    # Weaknesses / Improvement areas
+    elif any(word in message for word in ['weakness', 'improve', 'challenge']):
+        return (
+            f"You typed or said: {message}\n"
+            "Respond: One area Nduduzo continuously works on is balancing development speed with "
+            "code perfection. He sometimes spends extra time refining solutions to ensure "
+            "high-quality results. However, he has learned to manage this by prioritizing "
+            "deadlines effectively and focusing on delivering clean, maintainable code "
+            "within project constraints. He actively improves by studying advanced system "
+            "design principles, performance optimization, and professional development practices."
+    )
+ 
+    # Teamwork / Collaboration
+    elif any(word in message for word in ['team', 'collaborate', 'teamwork']):
+        return (
+            f"You typed or said: {message}\n"
+            "Respond: Nduduzo has collaborated in both academic and professional environments. "
+            "He worked with Fluid Intellect as a Frontend Developer and understands the importance "
+            "of communication, version control (Git), and structured development workflows."
+    )
+  
+    # Leadership / Initiative
+
+    elif any(word in message for word in ['lead', 'leadership', 'manage', 'initiative', 'ownership']):
+        return (
+            f"You typed or said: {message}\n"
+            "Respond: Nduduzo demonstrates leadership through initiative and ownership. "
+            "During his Work Integrated Learning, he independently planned and delivered "
+            "a complete intranet system, handling system analysis, design, and deployment."
+    )
+    
+    # Pressure / Deadline handling
+    elif any(word in message for word in ['pressure', 'deadline', 'stress']):
+        return (
+            f"You typed or said: {message}\n"
+            "Respond: Nduduzo handles pressure by prioritizing tasks, breaking complex work "
+            "into manageable steps, and maintaining structured planning. During his WIL period, "
+            "he delivered projects within deadlines while maintaining clean and maintainable code."
+    )
+
     # Location related
     elif any(word in message for word in ['south africa', 'location', 'based', 'where']):
         return (
-            f"You typed: {message}\n"
+            f"You typed or said: {message}\n"
             "Respond: Nduduzo is based in South Africa and works with clients both locally and internationally.")
     
     # Greetings
     elif any(word in message for word in ['hello', 'hi', 'hey', 'greetings']):
         return (
-            f"You typed: {message}\n"
+            f"You typed or said: {message}\n"
             "Respond: Hello! I'm Nduduzo's AI assistant. How can I help you learn more about his work today?")
     
     # Default response
     else:
         responses = [
-            f"You typed: {message}\n"
+            f"You typed or said: {message}\n"
             "Respond: That's an interesting question about Nduduzo's work. Could you be more specific?",
             "I'd be happy to help you learn more about Nduduzo's skills and experience. What would you like to know?",
             "Nduduzo specializes in full-stack development and AI integration. Feel free to ask about his specific skills or projects.",
