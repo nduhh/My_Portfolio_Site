@@ -1,0 +1,4 @@
+Django>=4.2.0
+python-dotenv>=1.0.0
+openai>=0.28.0
+django-cors-headers>=4.3.0
